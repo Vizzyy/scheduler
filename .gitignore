@@ -1,2 +1,6 @@
 node_modules/
 *.iml
+credentials.json
+token.json
+.env
+.DS_Store

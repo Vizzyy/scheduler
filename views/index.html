@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheduler</title>
+    <style>
+        .container {
+            height: 97vh;
+            position: relative;
+            border: 3px solid green;
+            background:grey;
+        }
+
+        .center {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-20%);
+            -webkit-transform: translateX(-50%) translateY(-20%);
+            transform: translateX(-50%) translateY(-20%);
+        }
+    </style>
+</head>
+<body class="container">
+
+    <div class="center">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=YmFybmFiYXMudml6eUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=YW9sMnJjdXFxNjdhZHY5MTIxYnBuNWhpYXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;color=%2333B679&amp;color=%23E67C73&amp;color=%232f6309&amp;mode=WEEK&amp;showTitle=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <br/><br/>
+        <form action="/add" method="post" id="form1" >
+            <label for="dogname">Dog Name</label><br>
+            <input type="text" id="dogname" name="dogname" value="daisy"><br>
+            <label for="datetimestart">Time Start</label><br>
+            <input type="datetime-local" id="datetimestart"
+                   name="datetimestart" value="2020-06-12T19:30"
+                   min="2018-06-07T00:00" max="2025-06-14T00:00">
+            <br>
+            <label for="datetimeend">Time End</label><br>
+            <input type="datetime-local" id="datetimeend"
+                   name="datetimeend" value="2020-06-12T20:30"
+                   min="2018-06-07T00:00" max="2025-06-14T00:00">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+<!--        <button type="submit" form="form1" value="Submit">Submit</button>-->
+    </div>
+
+</body>
+</html>
+
